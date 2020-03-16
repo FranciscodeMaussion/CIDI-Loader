@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "CIDI Loader",
+  "version": "0.4",
+  "description": "Carga las notas al CIDI con esta extension a traves de un CSV",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery.js", "jquery.csv.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "CIDI Loader",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
