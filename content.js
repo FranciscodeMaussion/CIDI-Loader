@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       reader.onload = function(){
         var data = reader.result;
         var NOTAS = $.csv.toArrays(data)
-        var CANTIDAD_NOTAS = 2;
+        var CANTIDAD_NOTAS = 3;
 
         var DESDE = 6; // la primera nota es el 6, la ultima es el 12. Cambiar deacuerdo a esa situacion. El casillero a cargar (en el cidi)
         var tabla_tbody = $("#tblNotasTrimestre").children()[1]; // Devuelve el tbody con todos los alumnos y sus notas
